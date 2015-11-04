@@ -65,32 +65,6 @@ public class FilmeDAO {
 			}
 		}
 	}
-
-	public void alterar(TIFilme filme) {
-		Connection con = null;
-		PreparedStatement stmt = null;
-		try {
-			con = Conexao.getConexao();
-			stmt = con.prepareStatement("update filme set titulo=?, classificacao=? where idFilme=?");
-			
-			stmt.setString(1, filme.getTitulo());
-			stmt.setString(2, filme.getClassificacao());
-			stmt.setInt(3, filme.getIdFilme());
-			
-			stmt.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				if (stmt != null)
-					stmt.close();
-				if (con != null)
-					con.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
-	}
 	public List<TIFilme> listar() {
 		Connection con = null;
 		PreparedStatement stmt = null;
