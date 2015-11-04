@@ -10,6 +10,12 @@ import java.util.List;
 import TIModel.TIFilme;
 import TIModel.TIUsuario;
 
+/**
+ * 
+ * @author Guilherme Veras Teixeira Duarte
+ * guilherme.veras10@hotmail.com
+ *
+ */
 public class FilmeDAO {
 
 	public void inserir(TIFilme filme){

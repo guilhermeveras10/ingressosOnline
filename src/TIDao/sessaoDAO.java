@@ -6,6 +6,12 @@ import java.sql.SQLException;
 
 import TIModel.TISessao;
 
+/**
+ * 
+ * @author Guilherme Veras Teixeira Duarte
+ * guilherme.veras10@hotmail.com
+ *
+ */
 public class sessaoDAO {
 
 	public void inserir(TISessao sessao){

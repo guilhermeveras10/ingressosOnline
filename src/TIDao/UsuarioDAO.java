@@ -9,6 +9,14 @@ import javax.naming.spi.DirStateFactory.Result;
 
 import TIModel.TIUsuario;
 
+
+/**
+ * 
+ * @author Guilherme Veras Teixeira Duarte
+ * guilherme.veras10@hotmail.com
+ *
+ */
+
 public class UsuarioDAO {
 
 	public void cadastrar(TIUsuario usuario) {

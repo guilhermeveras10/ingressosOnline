@@ -4,6 +4,13 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * 
+ * @author Guilherme Veras Teixeira Duarte
+ * guilherme.veras10@hotmail.com
+ *
+ */
+
 public class Conexao {
 	
 	static {

@@ -2,6 +2,12 @@ package TIModel;
 
 import java.io.Serializable;
 
+/**
+ * 
+ * @author Guilherme Veras Teixeira Duarte
+ * guilherme.veras10@hotmail.com
+ *
+ */
 public class TIFilme implements Serializable {
 
 	private int idFilme;

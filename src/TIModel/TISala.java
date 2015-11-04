@@ -1,5 +1,12 @@
 package TIModel;
 
+
+/**
+ * 
+ * @author Guilherme Veras Teixeira Duarte
+ * guilherme.veras10@hotmail.com
+ *
+ */
 public class TISala {
 	
 	private int idSala;

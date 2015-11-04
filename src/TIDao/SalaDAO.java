@@ -7,6 +7,12 @@ import java.sql.SQLException;
 import TIModel.TIIngresso;
 import TIModel.TISala;
 
+/**
+ * 
+ * @author Guilherme Veras Teixeira Duarte
+ * guilherme.veras10@hotmail.com
+ *
+ */
 public class SalaDAO {
 
 	public void inserir(TISala sala){

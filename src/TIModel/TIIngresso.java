@@ -3,6 +3,12 @@ package TIModel;
 import java.io.Serializable;
 import java.sql.Date;
 
+/**
+ * 
+ * @author Guilherme Veras Teixeira Duarte
+ * guilherme.veras10@hotmail.com
+ *
+ */
 public class TIIngresso implements Serializable {
 	
 	private int idIngresso;
