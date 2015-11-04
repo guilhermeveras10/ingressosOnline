@@ -5,18 +5,23 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import TIModel.TIIngresso;
+import TIModel.TISala;
 
-public class IngressoDAO {
-	public void inserir(TIIngresso ingresso){
+public class SalaDAO {
+
+	public void inserir(TISala sala){
 
 		Connection con = null;
 		PreparedStatement stmt = null;
 		try {
 			con = Conexao.getConexao();
-			stmt = con.prepareStatement("insert into ingresso (usuario_idUsuario,sessao_idSessao,data) values (?,?,?)");
-			stmt.setInt(1, ingresso.getUsuario().getIdUsuario());
-			stmt.setInt(2, ingresso.getSessao().getIdSessao());
-			stmt.setString(3, ingresso.getData());
+			stmt = con.prepareStatement("insert into sala (idSala,numero,qtdeLugares,valor,quatroD,filme_idFilme) values (?,?,?,?,?,?)");
+			stmt.setInt(1, sala.getIdSala());
+			stmt.setInt(2, sala.getNumero());
+			stmt.setInt(3, sala.getQtdeLugares());
+			stmt.setInt(4, sala.getValor());
+			stmt.setBoolean(5, sala.isQuatroD());
+			stmt.setInt(6, sala.getFilme().getIdFilme());
 			
 		} catch (SQLException e) {
 			e.printStackTrace();

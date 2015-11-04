@@ -2,12 +2,14 @@ package TIModel;
 
 import java.io.Serializable;
 import java.lang.reflect.Array;
+import java.security.Timestamp;
+import java.sql.Time;
 import java.util.Timer;
 
 public class TISessao implements Serializable {
 	
 	private int idSessao;
-	private Timer horario;
+	private Time horario;
 	private TISala sala;
 	
 	public int getIdSessao() {
@@ -16,10 +18,11 @@ public class TISessao implements Serializable {
 	public void setIdSessao(int idSessao) {
 		this.idSessao = idSessao;
 	}
-	public Timer getHorario() {
+	
+	public Time getHorario() {
 		return horario;
 	}
-	public void setHorario(Timer horario) {
+	public void setHorario(Time horario) {
 		this.horario = horario;
 	}
 	public TISala getSala() {

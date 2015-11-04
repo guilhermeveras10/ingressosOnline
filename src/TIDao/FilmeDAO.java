@@ -18,10 +18,11 @@ public class FilmeDAO {
 		PreparedStatement stmt = null;
 		try {
 			con = Conexao.getConexao();
-			stmt = con.prepareStatement("insert into departamento (titulo,classificacao,diretor) values (?,?,?)");
-			stmt.setString(1, filme.getTitulo());
-			stmt.setString(2, filme.getClassificacao());
-			stmt.setString(3, filme.getDiretor());
+			stmt = con.prepareStatement("insert into filme (idFilme,titulo,classificacao,diretor) values (?,?,?,?)");
+			stmt.setInt(1, filme.getIdFilme());
+			stmt.setString(2, filme.getTitulo());
+			stmt.setString(3, filme.getClassificacao());
+			stmt.setString(4, filme.getDiretor());
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {

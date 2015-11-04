@@ -11,7 +11,7 @@ public class TIUsuario implements Serializable{
 		private String senha;
 		
 		public TIUsuario(int CPF,String email,String nome,String senha ){
-			this.idUsuario = 0;
+			this.setIdUsuario(0);
 			this.CPF = CPF;
 			this.email = email;
 			this.nome = nome;
@@ -43,6 +43,12 @@ public class TIUsuario implements Serializable{
 		}
 		public void setSenha(String senha) {
 			this.senha = senha;
+		}
+		public int getIdUsuario() {
+			return idUsuario;
+		}
+		public void setIdUsuario(int idUsuario) {
+			this.idUsuario = idUsuario;
 		}
 	}
 

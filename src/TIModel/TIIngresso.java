@@ -8,10 +8,11 @@ public class TIIngresso implements Serializable {
 	private int idIngresso;
 	private TISessao sessao;
 	private TIUsuario usuario;
+	private String data;
 	
 	
 	public TIIngresso(TISessao sessao , TIUsuario usuario){
-		this.idIngresso = 0;
+		this.setIdIngresso(0);
 		this.sessao = sessao;
 		this.usuario = usuario;
 	}
@@ -33,6 +34,22 @@ public class TIIngresso implements Serializable {
 
 	public void setUsuario(TIUsuario usuario) {
 		this.usuario = usuario;
+	}
+
+	public String getData() {
+		return data;
+	}
+
+	public void setData(String data) {
+		this.data = data;
+	}
+
+	public int getIdIngresso() {
+		return idIngresso;
+	}
+
+	public void setIdIngresso(int idIngresso) {
+		this.idIngresso = idIngresso;
 	}
 
 }

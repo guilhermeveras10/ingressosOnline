@@ -11,7 +11,7 @@ public class TISala {
 	
 	public TISala(int numero,int qtdLugares,int valor,boolean quatroD){
 		this.numero = numero;
-		this.idSala = 0;
+		this.setIdSala(0);
 		this.qtdeLugares = qtdLugares;
 		this.valor = valor;
 		this.quatroD = quatroD;
@@ -55,6 +55,12 @@ public class TISala {
 	}
 	public void setFilme(TIFilme filme) {
 		this.filme = filme;
+	}
+	public int getIdSala() {
+		return idSala;
+	}
+	public void setIdSala(int idSala) {
+		this.idSala = idSala;
 	}
 	private boolean vip = false;
 
