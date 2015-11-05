@@ -18,7 +18,6 @@ public class TIIngresso implements Serializable {
 	
 	
 	public TIIngresso(TISessao sessao , TIUsuario usuario){
-		this.setIdIngresso(0);
 		this.sessao = sessao;
 		this.usuario = usuario;
 	}

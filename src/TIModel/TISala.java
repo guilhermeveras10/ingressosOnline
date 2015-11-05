@@ -18,7 +18,6 @@ public class TISala {
 	
 	public TISala(int numero,int qtdLugares,int valor,boolean quatroD){
 		this.numero = numero;
-		this.setIdSala(0);
 		this.qtdeLugares = qtdLugares;
 		this.valor = valor;
 		this.quatroD = quatroD;

@@ -19,7 +19,6 @@ public class TIUsuario implements Serializable{
 		private String senha;
 		
 		public TIUsuario(int CPF,String email,String nome,String senha ){
-			this.setIdUsuario(0);
 			this.CPF = CPF;
 			this.email = email;
 			this.nome = nome;
