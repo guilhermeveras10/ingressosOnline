@@ -26,9 +26,9 @@ public class FilmeDAO {
 			con = Conexao.getConexao();
 			stmt = con.prepareStatement("insert into filme (titulo,classificacao,diretor) values (?,?,?)");
 			
-			stmt.setString(2, filme.getTitulo());
-			stmt.setString(3, filme.getClassificacao());
-			stmt.setString(4, filme.getDiretor());
+			stmt.setString(1, filme.getTitulo());
+			stmt.setString(2, filme.getClassificacao());
+			stmt.setString(3, filme.getDiretor());
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
