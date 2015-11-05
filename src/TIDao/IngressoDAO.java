@@ -24,6 +24,8 @@ public class IngressoDAO {
 			stmt.setInt(2, ingresso.getSessao().getIdSessao());
 			stmt.setString(3, ingresso.getData());
 			
+			stmt.executeUpdate();
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {

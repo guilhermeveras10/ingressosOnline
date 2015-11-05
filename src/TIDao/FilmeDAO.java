@@ -24,11 +24,16 @@ public class FilmeDAO {
 		PreparedStatement stmt = null;
 		try {
 			con = Conexao.getConexao();
+			System.out.println("Conexao com Sucesso!!");
 			stmt = con.prepareStatement("insert into filme (titulo,classificacao,diretor) values (?,?,?)");
 			
 			stmt.setString(1, filme.getTitulo());
 			stmt.setString(2, filme.getClassificacao());
 			stmt.setString(3, filme.getDiretor());
+			
+			stmt.executeUpdate();
+			
+			System.out.println("Inserido com sucesso!!");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {

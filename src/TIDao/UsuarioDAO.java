@@ -24,12 +24,13 @@ public class UsuarioDAO {
 		PreparedStatement stmt = null;
 		try {
 			con = Conexao.getConexao();
-			stmt = con.prepareStatement("insert into usuario (idUsuario,cpf,email,nome,senha) values (?,?,?,?,?)");
-			stmt.setInt(1, usuario.getIdUsuario());
-			stmt.setInt(2, usuario.getCPF());
-			stmt.setString(3, usuario.getEmail());
-			stmt.setString(4, usuario.getNome());
-			stmt.setString(5, usuario.getSenha());
+			stmt = con.prepareStatement("insert into usuario (cpf,email,nome,senha) values (?,?,?,?)");
+			
+			stmt.setInt(1, usuario.getCPF());
+			stmt.setString(2, usuario.getEmail());
+			stmt.setString(3, usuario.getNome());
+			stmt.setString(4, usuario.getSenha());
+			stmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {

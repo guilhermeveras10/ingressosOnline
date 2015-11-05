@@ -19,10 +19,11 @@ public class sessaoDAO {
 		PreparedStatement stmt = null;
 		try {
 			con = Conexao.getConexao();
-			stmt = con.prepareStatement("insert into sessao (idSessao,horario,sala_idSala) values (?,?,?)");
-			stmt.setInt(1, sessao.getIdSessao());
-			stmt.setTime(2, sessao.getHorario());
-			stmt.setInt(3, sessao.getSala().getIdSala());
+			stmt = con.prepareStatement("insert into sessao (horario,sala_idSala) values (?,?)");
+			
+			stmt.setTime(1, sessao.getHorario());
+			stmt.setInt(2, sessao.getSala().getIdSala());
+			stmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {

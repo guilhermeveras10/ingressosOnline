@@ -101,6 +101,9 @@ public class TICdastroDeFilmes extends JFrame {
 					filmeModel.setTitulo(titulo);
 					
 					filmeDAO.inserir(filmeModel);
+					
+//					new TIListaFilmes().setVisible(true);  troca tela
+//				    setVisible(false); 
 
 			}
 		});
@@ -111,7 +114,7 @@ public class TICdastroDeFilmes extends JFrame {
 		btnExcluir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				int idFilme = Integer.parseInt(JOptionPane.showInputDialog(null, "digite o codigo do cliente "));
-				FilmeDAO filmeDAO = new FilmeDAO();
+
 				filmeDAO.excluir(idFilme);
 			}
 		});
