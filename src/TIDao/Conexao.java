@@ -22,6 +22,6 @@ public class Conexao {
 	}
 	
 	public static Connection getConexao() throws SQLException {
-		return DriverManager.getConnection("jdbc:mysql://localhost/bd_empresa", "root", "unifor");
+		return DriverManager.getConnection("jdbc:mysql://localhost/trabalhoIngressos", "root", "");
 	}
 }

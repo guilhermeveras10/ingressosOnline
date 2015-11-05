@@ -17,10 +17,9 @@ public class TIFilme implements Serializable {
 	
 	
 	public TIFilme(String titulo, String classificacao, String diretor){
-		this.setIdFilme(0);
-		this.setTitulo(titulo);
-		this.setClassificacao(classificacao);
-		this.setDiretor(diretor);
+		this.titulo = titulo;
+		this.classificacao = classificacao;
+		this.diretor = diretor;
 	}
 	public TIFilme(){
 		

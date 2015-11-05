@@ -24,6 +24,10 @@ public class TICdastroDeFilmes extends JFrame {
 	private JTextField campoTitulo;
 	private JTextField campoDiretor;
 	private JTextField campoClassificacao;
+	
+	FilmeDAO filmeDAO = new FilmeDAO();
+	TIFilme filmeModel = new TIFilme();
+
 
 	/**
 	 * Launch the application.
@@ -84,15 +88,19 @@ public class TICdastroDeFilmes extends JFrame {
 
 		JButton btnCadastrar = new JButton("Cadastrar");
 		btnCadastrar.addActionListener(new ActionListener() {
+			
 			public void actionPerformed(ActionEvent e) {
+				
 				String titulo = campoTitulo.getText();
 				String diretor = campoDiretor.getText();
 				String classificacao = campoClassificacao.getText();
-
-				FilmeDAO filmeDAO = new FilmeDAO();
-				TIFilme filmeModel = new TIFilme(titulo, classificacao, diretor);
-
-				filmeDAO.inserir(filmeModel);
+		
+				
+					filmeModel.setClassificacao(classificacao);
+					filmeModel.setDiretor(diretor);
+					filmeModel.setTitulo(titulo);
+					
+					filmeDAO.inserir(filmeModel);
 
 			}
 		});
