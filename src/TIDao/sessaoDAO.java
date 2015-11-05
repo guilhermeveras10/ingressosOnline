@@ -24,6 +24,7 @@ public class sessaoDAO {
 			stmt.setTime(1, sessao.getHorario());
 			stmt.setInt(2, sessao.getSala().getIdSala());
 			stmt.executeUpdate();
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {

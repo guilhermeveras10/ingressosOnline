@@ -70,4 +70,5 @@ public class TISala {
 	}
 	private boolean vip = false;
 
+
 }
