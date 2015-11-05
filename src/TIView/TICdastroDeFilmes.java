@@ -102,8 +102,6 @@ public class TICdastroDeFilmes extends JFrame {
 					
 					filmeDAO.inserir(filmeModel);
 					
-//					new TIListaFilmes().setVisible(true);  troca tela
-//				    setVisible(false); 
 
 			}
 		});
