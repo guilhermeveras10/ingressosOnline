@@ -7,6 +7,8 @@ import java.sql.Date;
  * 
  * @author Guilherme Veras Teixeira Duarte
  * guilherme.veras10@hotmail.com
+ * @author Bárbara Perina 
+ * babiperina@edu.unifor.br
  *
  */
 public class TIIngresso implements Serializable {

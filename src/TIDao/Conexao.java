@@ -8,6 +8,8 @@ import java.sql.SQLException;
  * 
  * @author Guilherme Veras Teixeira Duarte
  * guilherme.veras10@hotmail.com
+ * @author Bárbara Perina
+ * babiperina@edu.unifor.br
  *
  */
 

@@ -1,9 +1,13 @@
-package View;
+package TIView;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import TIDao.UsuarioDAO;
+import TIModel.TIUsuario;
+
 import java.awt.GridLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
@@ -122,12 +126,14 @@ public class Login extends JFrame {
 		JButton botaoEntrar = new JButton("Entrar");
 		botaoEntrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (textoLogin.getText() == "") {
-				JOptionPane.showMessageDialog(null, "Login vazio");	
-				}else{
+				UsuarioDAO dao = new UsuarioDAO();
+				String senha = String.valueOf(textoSenha.getPassword());
+				TIUsuario usuario = dao.login(textoLogin.getText(), senha);
+				if (usuario != null) {
 					new Filmes().setVisible(true);
 					setVisible(false);
-
+				} else {
+					JOptionPane.showMessageDialog(null, "acesso negado");
 				}
 			}
 		});

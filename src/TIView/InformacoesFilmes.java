@@ -1,4 +1,5 @@
-package View;
+package TIView;
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -14,6 +15,12 @@ import java.awt.event.ActionEvent;
 import java.awt.Font;
 import javax.swing.JTextPane;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.ImageIcon;
+import javax.swing.JRadioButton;
+import java.awt.BorderLayout;
+import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
 
 public class InformacoesFilmes extends JFrame {
 
@@ -46,99 +53,173 @@ public class InformacoesFilmes extends JFrame {
 		MainPane.setBackground(Color.DARK_GRAY);
 		MainPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(MainPane);
-		MainPane.setLayout(new GridLayout(1, 0, 0, 0));
-		
-		JPanel div1_MainPane = new JPanel();
-		MainPane.add(div1_MainPane);
-		div1_MainPane.setLayout(new GridLayout(2, 0, 0, 0));
-		
-		JPanel div1_div1_MainPane = new JPanel();
-		div1_div1_MainPane.setBackground(Color.GRAY);
-		div1_MainPane.add(div1_div1_MainPane);
-		div1_div1_MainPane.setLayout(new GridLayout(0, 3, 0, 0));
-		
-		JPanel div1_div1_div1_MainPane = new JPanel();
-		div1_div1_div1_MainPane.setBackground(Color.GRAY);
-		div1_div1_MainPane.add(div1_div1_div1_MainPane);
-		
-		JPanel div2_div1_div1_MainPane = new JPanel();
-		div1_div1_MainPane.add(div2_div1_div1_MainPane);
-		
-		JPanel div3_div1_div1_MainPane = new JPanel();
-		div3_div1_div1_MainPane.setBackground(Color.GRAY);
-		div1_div1_MainPane.add(div3_div1_div1_MainPane);
-		div3_div1_div1_MainPane.setLayout(new GridLayout(4, 2, 0, 0));
-		
-		JPanel conteinerSala1 = new JPanel();
-		conteinerSala1.setBorder(new MatteBorder(5, 3, 1, 1, (Color) new Color(128, 128, 128)));
-		conteinerSala1.setBackground(Color.RED);
-		div3_div1_div1_MainPane.add(conteinerSala1);
-		conteinerSala1.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-		
-		JPanel conteinerHorario1 = new JPanel();
-		conteinerHorario1.setBackground(Color.GRAY);
-		div3_div1_div1_MainPane.add(conteinerHorario1);
-		conteinerHorario1.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-		
-		JPanel conteinerSala2 = new JPanel();
-		conteinerSala2.setBorder(new MatteBorder(5, 3, 1, 1, (Color) new Color(128, 128, 128)));
-		conteinerSala2.setBackground(Color.RED);
-		div3_div1_div1_MainPane.add(conteinerSala2);
-		conteinerSala2.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-		
-		JPanel conteinerHorario2 = new JPanel();
-		conteinerHorario2.setBackground(Color.GRAY);
-		div3_div1_div1_MainPane.add(conteinerHorario2);
-		conteinerHorario2.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-		
-		JPanel conteinerSala3 = new JPanel();
-		conteinerSala3.setBackground(Color.RED);
-		conteinerSala3.setBorder(new MatteBorder(5, 3, 1, 1, (Color) Color.GRAY));
-		div3_div1_div1_MainPane.add(conteinerSala3);
-		conteinerSala3.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-		
-		JPanel conteinerHorario3 = new JPanel();
-		conteinerHorario3.setBackground(Color.GRAY);
-		div3_div1_div1_MainPane.add(conteinerHorario3);
-		conteinerHorario3.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-		
-		JPanel conteinerSala4 = new JPanel();
-		conteinerSala4.setBorder(new MatteBorder(5, 3, 1, 1, (Color) Color.GRAY));
-		conteinerSala4.setBackground(Color.RED);
-		div3_div1_div1_MainPane.add(conteinerSala4);
-		conteinerSala4.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-		
-		JPanel conteinerHorario4 = new JPanel();
-		conteinerHorario4.setBackground(Color.GRAY);
-		div3_div1_div1_MainPane.add(conteinerHorario4);
-		conteinerHorario4.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-		
-		JPanel div2_div1_MainPane = new JPanel();
-		div2_div1_MainPane.setBackground(Color.GRAY);
-		div1_MainPane.add(div2_div1_MainPane);
-		div2_div1_MainPane.setLayout(null);
-		
-		JButton botaoComprar = new JButton("Comprar Ingresso");
-		botaoComprar.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
-		botaoComprar.addActionListener(new ActionListener() {
+		MainPane.setLayout(new GridLayout(0, 2, 0, 0));
+
+		JPanel divEsquerdaDaMainPane = new JPanel();
+		divEsquerdaDaMainPane.setBackground(Color.GRAY);
+		MainPane.add(divEsquerdaDaMainPane);
+		divEsquerdaDaMainPane.setLayout(null);
+
+		JButton button = new JButton("");
+		button.setIcon(new ImageIcon("/Users/GuilhermeDuarte/Downloads/ImageResizer.net - yz9pythpg5i87zr.png"));
+		button.setBounds(6, 6, 125, 180);
+		divEsquerdaDaMainPane.add(button);
+
+		JButton button_1 = new JButton("Voltar");
+		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				new Filmes().setVisible(true);
+				setVisible(false);
 			}
 		});
-		botaoComprar.setBounds(6, 99, 117, 29);
-		div2_div1_MainPane.add(botaoComprar);
-		
-		JButton botaoVoltar = new JButton("Voltar");
-		botaoVoltar.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
-		botaoVoltar.setBounds(323, 99, 117, 29);
-		div2_div1_MainPane.add(botaoVoltar);
-		
-		JTextPane areaTextoDescricao = new JTextPane();
-		areaTextoDescricao.setBackground(Color.LIGHT_GRAY);
-		areaTextoDescricao.setBounds(34, 24, 382, 63);
-		div2_div1_MainPane.add(areaTextoDescricao);
-		
-		JLabel textoDescricaodoFilme = new JLabel("Descri��o do Filme:");
-		textoDescricaodoFilme.setBounds(34, 6, 164, 16);
-		div2_div1_MainPane.add(textoDescricaodoFilme);
+		button_1.setBounds(6, 222, 88, 38);
+		divEsquerdaDaMainPane.add(button_1);
+
+		JPanel divEsquerdaDaMain = new JPanel();
+		divEsquerdaDaMain.setBackground(Color.GRAY);
+		MainPane.add(divEsquerdaDaMain);
+		divEsquerdaDaMain.setLayout(new GridLayout(2, 0, 0, 0));
+
+		JPanel divSuperior = new JPanel();
+		divSuperior.setBackground(Color.GRAY);
+		divEsquerdaDaMain.add(divSuperior);
+		divSuperior.setLayout(null);
+
+		JLabel lblSesses = new JLabel("SESSÕES");
+		lblSesses.setForeground(Color.WHITE);
+		lblSesses.setBounds(85, 112, 61, 16);
+		divSuperior.add(lblSesses);
+
+		JLabel lblDescrioDoFilme = new JLabel("Descrição do Filme:");
+		lblDescrioDoFilme.setBounds(6, 6, 140, 16);
+		divSuperior.add(lblDescrioDoFilme);
+
+		JPanel divInferior = new JPanel();
+		divEsquerdaDaMain.add(divInferior);
+		divInferior.setLayout(new GridLayout(2, 0, 0, 0));
+
+		JPanel panel = new JPanel();
+		divInferior.add(panel);
+		panel.setLayout(new GridLayout(1, 4, 0, 0));
+
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(Color.RED);
+		panel.add(panel_1);
+		panel_1.setLayout(new GridLayout(2, 1, 0, 0));
+
+		JPanel sessao01a = new JPanel();
+		sessao01a.setBackground(Color.RED);
+		panel_1.add(sessao01a);
+		sessao01a.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+
+		JLabel lblNewLabel = new JLabel("12:30");
+		sessao01a.add(lblNewLabel);
+
+		JPanel sessao01b = new JPanel();
+		sessao01b.setBackground(Color.RED);
+		panel_1.add(sessao01b);
+		sessao01b.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+
+		JRadioButton sessao01 = new JRadioButton("");
+		sessao01b.add(sessao01);
+
+		JPanel panel_2 = new JPanel();
+		panel_2.setBackground(Color.RED);
+		panel.add(panel_2);
+		panel_2.setLayout(new GridLayout(2, 0, 0, 0));
+
+		JPanel panel_6 = new JPanel();
+		panel_6.setBackground(Color.RED);
+		panel_2.add(panel_6);
+		panel_6.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+
+		JLabel label = new JLabel("16:00");
+		panel_6.add(label);
+
+		JPanel panel_7 = new JPanel();
+		panel_7.setBackground(Color.RED);
+		panel_2.add(panel_7);
+		panel_7.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+
+		JRadioButton sessao02 = new JRadioButton("");
+		panel_7.add(sessao02);
+
+		JPanel panel_3 = new JPanel();
+		panel_3.setBackground(new Color(255, 0, 0));
+		panel.add(panel_3);
+		panel_3.setLayout(new GridLayout(2, 0, 0, 0));
+
+		JPanel panel_8 = new JPanel();
+		panel_8.setBackground(Color.RED);
+		panel_3.add(panel_8);
+		panel_8.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+
+		JLabel label_1 = new JLabel("18:30");
+		panel_8.add(label_1);
+
+		JPanel panel_9 = new JPanel();
+		panel_9.setBackground(Color.RED);
+		panel_3.add(panel_9);
+		panel_9.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+
+		JRadioButton sessao03 = new JRadioButton("");
+		panel_9.add(sessao03);
+
+		JPanel panel_4 = new JPanel();
+		panel_4.setBackground(Color.RED);
+		panel.add(panel_4);
+		panel_4.setLayout(new GridLayout(2, 0, 0, 0));
+
+		JPanel panel_10 = new JPanel();
+		panel_10.setBackground(Color.RED);
+		panel_4.add(panel_10);
+		panel_10.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+
+		JLabel label_2 = new JLabel("20:00");
+		panel_10.add(label_2);
+
+		JPanel panel_11 = new JPanel();
+		panel_11.setBackground(Color.RED);
+		panel_4.add(panel_11);
+		panel_11.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+
+		JRadioButton sessao04 = new JRadioButton("");
+		panel_11.add(sessao04);
+
+		JPanel panel_5 = new JPanel();
+		panel_5.setBackground(Color.GRAY);
+		divInferior.add(panel_5);
+		panel_5.setLayout(null);
+
+		JButton botaoComprar = new JButton("Comprar");
+		botaoComprar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int contSessaoSelecionada = 0;
+
+				if (sessao01.isSelected())
+					contSessaoSelecionada++;
+				if (sessao02.isSelected())
+					contSessaoSelecionada++;
+				if (sessao03.isSelected())
+					contSessaoSelecionada++;
+				if (sessao04.isSelected())
+					contSessaoSelecionada++;
+
+				if (contSessaoSelecionada == 1) {
+					new Compra().setVisible(true);
+					setVisible(false);
+				} else {
+					if (contSessaoSelecionada > 1) {
+						JOptionPane.showMessageDialog(null, "Mais de uma sessão selecionada.");
+					} else {
+						JOptionPane.showMessageDialog(null, "Selecione uma sessão.");
+
+					}
+				}
+
+			}
+		});
+		botaoComprar.setBounds(126, 23, 88, 38);
+		panel_5.add(botaoComprar);
 	}
 }
