@@ -131,7 +131,7 @@ public class Login extends JFrame {
 				TIUsuario usuario = dao.login(textoLogin.getText(), senha);
 				if(textoLogin.getText().equals("admin") && textoSenha.getPassword().equals("admin")){
 					JOptionPane.showMessageDialog(null, "acesso ao administrador");
-					new TICdastroDeFilmes().setVisible(true);
+					new MenuAmin().setVisible(true);
 					setVisible(false);
 				}
 				if (usuario != null) {
