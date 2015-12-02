@@ -19,49 +19,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class TIMenuAdmin extends JFrame {
-	public TIMenuAdmin() {
-		getContentPane().setLayout(null);
-		
-		JButton cadastroSessao = new JButton("cadastro sessao");
-		cadastroSessao.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				new TICadastroDeSessao().setVisible(true);
-				setVisible(false);
-			}
-		});
-		cadastroSessao.setBounds(37, 6, 389, 29);
-		getContentPane().add(cadastroSessao);
-		
-		JButton cadastroIngressos = new JButton("cadastro ingressos");
-		cadastroIngressos.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				new TICadastroDeIngressos().setVisible(true);
-				setVisible(false);
-			}
-		});
-		cadastroIngressos.setBounds(37, 34, 389, 29);
-		getContentPane().add(cadastroIngressos);
-		
-		JButton cadastroFilmes = new JButton("cadastro filmes");
-		cadastroFilmes.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				new TICdastroDeFilmes().setVisible(true);
-				setVisible(false);
-			}
-		});
-		cadastroFilmes.setBounds(37, 62, 389, 29);
-		getContentPane().add(cadastroFilmes);
-		
-		JButton cadastroUsuario = new JButton("cadastro usuario");
-		cadastroUsuario.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				new TICadastroDeUsuarios().setVisible(true);
-				setVisible(false);
-			}
-		});
-		cadastroUsuario.setBounds(37, 91, 389, 29);
-		getContentPane().add(cadastroUsuario);
-	}
 
 	private JPanel contentPane;
 	private JTextField campoTitulo;
@@ -79,7 +36,7 @@ public class TIMenuAdmin extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TICdastroDeFilmes frame = new TICdastroDeFilmes();
+					TIMenuAdmin frame = new TIMenuAdmin();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -87,11 +44,10 @@ public class TIMenuAdmin extends JFrame {
 			}
 		});
 	}
-
 	/**
 	 * Create the frame.
 	 */
-	public TICdastroDeFilmes() {
+	public TIMenuAdmin() {
 		setTitle("Sistema de cinemas");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setResizable(false);// fixar tamanho tela
