@@ -131,6 +131,16 @@ public class TICadastroDeUsuarios extends JFrame {
 		});
 		btnCancelar.setBounds(209, 378, 117, 29);
 		contentPane.add(btnCancelar);
+		
+		JButton btnMenu = new JButton("Menu");
+		btnMenu.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new MenuAmin().setVisible(true);
+				setVisible(false);
+			}
+		});
+		btnMenu.setBounds(0, 16, 117, 29);
+		contentPane.add(btnMenu);
 
 		
 	}

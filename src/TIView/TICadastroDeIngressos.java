@@ -128,6 +128,16 @@ public class TICadastroDeIngressos extends JFrame {
 		btnCancelar.setBounds(300, 427, 117, 29);
 		contentPane.add(btnCancelar);
 		
+		JButton btnMenu = new JButton("Menu");
+		btnMenu.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new MenuAmin().setVisible(true);
+				setVisible(false);
+			}
+		});
+		btnMenu.setBounds(8, 6, 117, 29);
+		contentPane.add(btnMenu);
+		
 	}
 
 }

@@ -115,6 +115,16 @@ public class TICadastroDeSessao extends JFrame {
 		cancelar.setBounds(258, 331, 117, 29);
 		contentPane.add(cancelar);
 		
+		JButton btnMenu = new JButton("Menu");
+		btnMenu.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new MenuAmin().setVisible(true);
+				setVisible(false);
+			}
+		});
+		btnMenu.setBounds(6, 21, 117, 29);
+		contentPane.add(btnMenu);
+		
 	}
 
 }

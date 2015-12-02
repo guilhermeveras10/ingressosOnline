@@ -131,5 +131,15 @@ public class TICdastroDeFilmes extends JFrame {
 		});
 		btnCancelar.setBounds(185, 213, 117, 29);
 		contentPane.add(btnCancelar);
+		
+		JButton btnMenu = new JButton("Menu");
+		btnMenu.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new MenuAmin().setVisible(true);
+				setVisible(false);
+			}
+		});
+		btnMenu.setBounds(46, 213, 117, 29);
+		contentPane.add(btnMenu);
 	}
 }
